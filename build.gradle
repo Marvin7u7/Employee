@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    // String constants
+    ext {
+        // SDK Constants
+        COMPILE_SDK = 32
+        MINIMUM_SDK = 19
+        TARGET_SDK = COMPILE_SDK
+
+        // Libraries
+        constraint_layout = "2.1.3"
+        lifecycle_version = "2.4.1"
+        kotlin_coroutines = "1.6.0"
+        material = "1.5.0"
+        navigation = "2.4.1"
+        room = "2.4.2"
+    }
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation"
+    }
+
+}
+
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

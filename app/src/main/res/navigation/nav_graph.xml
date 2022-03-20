@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/employeeListFragment">
+
+    <fragment
+        android:id="@+id/employeeListFragment"
+        android:name="com.jonareas.employee.view.employee.EmployeeListFragment"
+        android:label="fragment_employee_list"
+        tools:layout="@layout/fragment_employee_list" >
+        <action
+            android:id="@+id/action_list_to_details"
+            app:destination="@id/employeeDetailFragment" />
+        <action
+            android:id="@+id/action_list_to_addemployee"
+            app:destination="@id/addEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDetailFragment"
+        android:name="com.jonareas.employee.view.employee.EmployeeDetailFragment"
+        android:label="fragment_employee_detail"
+        tools:layout="@layout/fragment_employee_detail" />
+    <fragment
+        android:id="@+id/addEmployeeFragment"
+        android:name="com.jonareas.employee.view.employee.AddEmployeeFragment"
+        android:label="AddEmployeeFragment"
+        tools:layout="@layout/fragment_add_employee"
+        />
+
+
+</navigation>
